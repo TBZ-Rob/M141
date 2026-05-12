@@ -22,6 +22,8 @@
 
 Die Installation verlief reibungslos. Da XAMPP Apache, MySQL und phpMyAdmin als Bundle mitbringt, ist keine separate Konfiguration nötig. Einzige Besonderheit: Installation nach `C:\xampp` statt `C:\Program Files`, um UAC-Berechtigungsprobleme zu vermeiden.
 
+Da die Installationsschritte bereits bekannte Grundlagen waren und in ca. 10 Minuten abgeschlossen wurden, lag der Fokus dieses Tages auf dem **Aufbau eines strukturierten und ansprechend gestalteten GitHub-Repositories** für das Lernportfolio. Dazu gehörten die Ordnerstruktur, Navigation zwischen Seiten, Badges, einheitliches Design sowie die Einrichtung des [Filesystem MCP Servers](https://modelcontextprotocol.io) für die Zusammenarbeit mit Claude AI.
+
 ---
 
 ### 📸 Screenshots
@@ -38,6 +40,9 @@ Die Installation verlief reibungslos. Da XAMPP Apache, MySQL und phpMyAdmin als 
 | Apache gestartet | ✅ |
 | MySQL gestartet | ✅ |
 | phpMyAdmin erreichbar | ✅ |
+| GitHub Repository aufgesetzt | ✅ |
+| Lernportfolio-Struktur erstellt | ✅ |
+| Filesystem MCP Server konfiguriert | ✅ |
 
 ---
 

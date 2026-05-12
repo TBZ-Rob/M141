@@ -2,10 +2,13 @@
 
 ![Modul](https://img.shields.io/badge/Modul-M141-blue)
 ![Klasse](https://img.shields.io/badge/Klasse-PE24c-orange)
+![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
 ![Fortschritt](https://img.shields.io/badge/Fortschritt-1%2F9%20Tage-yellow)
 
 Dieses Portfolio dokumentiert meinen Lernprozess im Modul **M141 – Datenbanksystem in Betrieb nehmen**.
 Behandelt werden Themen rund um Installation, Konfiguration, Sicherheit und Administration von relationalen Datenbanksystemen mit **MariaDB** und **phpMyAdmin**.
+
+**Autor:** Robin Nydegger
 
 ---
 
@@ -38,7 +41,14 @@ Behandelt werden Themen rund um Installation, Konfiguration, Sicherheit und Admi
 
 - [✅ Checkpoints](./Checkpoints/README.md)
 - [🎓 LB3 Praxisarbeit](./LB3-Praxisarbeit/README.md)
+- [💬 Prompts](./Prompts.md)
 
 ---
 
 [🏠 Projekt-Übersicht](../README.md)
+
+---
+
+$\textcolor{#8b949e}{\text{Hinweis: Diagramme, Rechtschreibung und Repo-Struktur wurden mit }} \textcolor{#D4622A}{\text{Claude AI Pro}} \textcolor{#8b949e}{\text{ generiert.}}$
+
+<a href="./Prompts.md" style="color:#D4622A;">Prompts</a>

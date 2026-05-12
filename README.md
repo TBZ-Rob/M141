@@ -20,7 +20,7 @@ Die Inhalte wurden eigenständig erarbeitet. Für folgende Bereiche wurde **Clau
 
 Alle verwendeten Prompts sind auf der Seite [Prompts](./Lernportfolio/Prompts.md) dokumentiert.
 
-> Die fachlichen Inhalte, Entscheidungen und das Verständnis stammen ausschliesslich von Robin Nydegger.
+
 
 ---
 

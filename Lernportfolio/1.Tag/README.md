@@ -24,6 +24,7 @@ Die Installation verlief reibungslos. Da XAMPP Apache, MySQL und phpMyAdmin als 
 
 Da die Installationsschritte bereits bekannte Grundlagen waren und in ca. 10 Minuten abgeschlossen wurden, lag der Fokus dieses Tages auf dem **Aufbau eines strukturierten und ansprechend gestalteten GitHub-Repositories** für das Lernportfolio. Dazu gehörten die Ordnerstruktur, Navigation zwischen Seiten, Badges, einheitliches Design sowie die Einrichtung des [Filesystem MCP Servers](https://modelcontextprotocol.io) für die Zusammenarbeit mit Claude AI.
 
+nicht desto Trotz blieb immernoch Zeit übrig, daher habe ich begonnen mit Tag 2.
 ---
 
 ### 📸 Screenshots

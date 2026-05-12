@@ -5,7 +5,7 @@
 
 Diese Seite dokumentiert die wiederkehrenden Prompts, die im Rahmen dieses Lernportfolios verwendet wurden.
 
-> ⚠️ **Wichtiger Hinweis:** Claude AI wurde ausschliesslich für **Design, Rechtschreibung, Darstellung und Repo-Struktur** eingesetzt. Der fachliche Inhalt, die Notizen und Reflexionen stammen vollständig von **Robin Nydegger** und wurden durch Claude **nicht verändert**.
+> ⚠️ **Wichtiger Hinweis:** Claude AI wurde ausschliesslich für **Design, Rechtschreibung, Darstellung und Repo-Struktur** eingesetzt. Der fachliche Inhalt, die Notizen und Reflexionen wurden nicht überarbeitet**.
 >
 > Claude hat über den **Filesystem MCP Server** direkten Lese- und Schreibzugriff auf dieses Repository.
 

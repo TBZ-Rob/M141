@@ -26,11 +26,11 @@ Die Installation verlief reibungslos. Da XAMPP Apache, MySQL und phpMyAdmin als 
 
 ### 📸 Screenshots
 
-> *(Screenshots in [./screenshots/](./screenshots/) ablegen und hier verlinken)*
+![phpMyAdmin erreichbar](./screenshots/1t_phpmyadmin-erreichbar.png)
 
 ---
 
-### ✅ Checkpoint
+### ✅ [Checkpoint](../Checkpoints/README.md)
 
 | Ziel | Status |
 |------|--------|

@@ -5,18 +5,3 @@
 
 ---
 
-## Aufgabenstellung
-
-> *(Aufgabenstellung einfügen)*
-
----
-
-## Dokumentation
-
-> *(Eigene Dokumentation hier)*
-
----
-
-## Fazit
-
-> *(Reflexion zur Praxisarbeit)*

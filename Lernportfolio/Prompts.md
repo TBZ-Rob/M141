@@ -22,7 +22,7 @@ auf den neusten Stand und füge bei neuen Seiten hinzu.
 ### ✏️ Rechtschreibung prüfen
 ```
 Prüfe die Rechtschreibung und Grammatik aller bestehenden Seiten.
-Verändere dabei den Inhalt und die Aussage des Textes nicht.
+Sätze sollen nicht angepasst bzw. verändert werden.
 ```
 
 ### 🎨 Design Vorschläge

@@ -3,8 +3,7 @@
 ![Modul](https://img.shields.io/badge/Modul-M141-blue)
 ![Klasse](https://img.shields.io/badge/Klasse-PE24c-orange)
 ![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
-
-**Klasse:** PE24c &nbsp;|&nbsp; **Zeitraum:** Mai – Juli 2025 &nbsp;|&nbsp; **Autor:** Robin Nydegger
+![Zeitraum](https://img.shields.io/badge/Zeitraum-Mai–Juli%202025-lightgrey)
 
 ---
 

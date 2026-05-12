@@ -8,8 +8,6 @@
 Dieses Portfolio dokumentiert meinen Lernprozess im Modul **M141 – Datenbanksystem in Betrieb nehmen**.
 Behandelt werden Themen rund um Installation, Konfiguration, Sicherheit und Administration von relationalen Datenbanksystemen mit **MariaDB** und **phpMyAdmin**.
 
-**Autor:** Robin Nydegger
-
 ---
 
 ## 🗓️ Tage

@@ -1,5 +1,6 @@
-# 6. Tag – Server-Administration
+# 🗄️ Tag 6 – Server-Administration
 
+![Status](https://img.shields.io/badge/Status-Ausstehend-red)
 ![Datum](https://img.shields.io/badge/Datum-16.06.2025-blue)
 ![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
 

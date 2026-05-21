@@ -1,5 +1,6 @@
-# 7. Tag – LB2 & Testing/Performance
+# 🗄️ Tag 7 – LB2 & Testing/Performance
 
+![Status](https://img.shields.io/badge/Status-Ausstehend-red)
 ![Datum](https://img.shields.io/badge/Datum-23.06.2025-blue)
 ![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
 

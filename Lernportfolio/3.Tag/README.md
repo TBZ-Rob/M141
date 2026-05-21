@@ -1,5 +1,6 @@
-# 3. Tag – Transaktionen & Tabellentypen
+# 🗄️ Tag 3 – Transaktionen & Tabellentypen
 
+![Status](https://img.shields.io/badge/Status-Ausstehend-red)
 ![Datum](https://img.shields.io/badge/Datum-26.05.2025-blue)
 ![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
 

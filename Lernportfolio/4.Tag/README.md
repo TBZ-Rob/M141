@@ -1,5 +1,6 @@
-# 4. Tag – Datenbanksicherheit
+# 🗄️ Tag 4 – Datenbanksicherheit
 
+![Status](https://img.shields.io/badge/Status-Ausstehend-red)
 ![Datum](https://img.shields.io/badge/Datum-02.06.2025-blue)
 ![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
 

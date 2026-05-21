@@ -89,3 +89,9 @@ Datenbank wird als Cloud-Dienst bereitgestellt. Kein eigener Server nötig. Beis
 
 | [🏠 Übersicht](../../README.md) | [⬅️ Tag 1](../README.md) |
 |---|---|
+
+---
+
+$\textcolor{#8b949e}{\text{Hinweis: Diagramme, Rechtschreibung und Repo-Struktur wurden mit }} \textcolor{#D4622A}{\text{Claude AI Pro}} \textcolor{#8b949e}{\text{ generiert.}}$
+
+<a href="../Prompts.md" style="color:#D4622A;">Prompts</a>

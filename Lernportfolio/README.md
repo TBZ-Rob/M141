@@ -3,7 +3,7 @@
 ![Modul](https://img.shields.io/badge/Modul-M141-blue)
 ![Klasse](https://img.shields.io/badge/Klasse-PE24c-orange)
 ![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
-![Fortschritt](https://img.shields.io/badge/Fortschritt-1%2F9%20Tage-yellow)
+![Fortschritt](https://img.shields.io/badge/Fortschritt-2%2F9%20Tage-yellow)
 
 Dieses Portfolio dokumentiert meinen Lernprozess im Modul **M141 – Datenbanksystem in Betrieb nehmen**.
 Behandelt werden Themen rund um Installation, Konfiguration, Sicherheit und Administration von relationalen Datenbanksystemen mit **MariaDB** und **phpMyAdmin**.
@@ -15,7 +15,7 @@ Behandelt werden Themen rund um Installation, Konfiguration, Sicherheit und Admi
 | | Tag | Thema | Datum | Status |
 |---|-----|-------|-------|--------|
 | 🟢 | [1. Tag](./1.Tag/README.md) | Installation RDBMS & Tools | 12.05. | ✅ Abgeschlossen |
-| ⚪ | [2. Tag](./2.Tag/README.md) | Konfiguration & Datenimport | 19.05. | 🔒 Ausstehend |
+| 🟢 | [2. Tag](./2.Tag/README.md) | Konfiguration & Datenimport | 19.05. | ✅ Abgeschlossen |
 | ⚪ | [3. Tag](./3.Tag/README.md) | Transaktionen & Tabellentypen | 26.05. | 🔒 Ausstehend |
 | ⚪ | [4. Tag](./4.Tag/README.md) | Datenbanksicherheit | 02.06. | 🔒 Ausstehend |
 | ⚪ | [5. Tag](./5.Tag/README.md) | LB1 + Zugriffssystem | 09.06. | 🔒 Ausstehend |

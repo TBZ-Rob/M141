@@ -46,7 +46,7 @@ Kollation definiert, wie Zeichen **sortiert** und **verglichen** werden. `utf8mb
 - `ci` → Case Insensitive (Gross-/Kleinschreibung wird ignoriert)
 
 **Warum nicht einfach `utf8`?**
-`utf8` in MySQL/MariaDB unterstützt nur 3 Bytes – Zeichen wie Emojis oder bestimmte asiatische Schriftzeichen werden abgeschnitten. `utf8mb4` ist der korrekte Standard seit MySQL 5.5.3.
+`utf8` in MySQL/MariaDB unterstützt nur 3 Byte-WZeichen wie Emojis oder bestimmte asiatische Schriftzeichen werden abgeschnitten. `utf8mb4` ist der korrekte Standard seit MySQL 5.5.3.
 
 ---
 

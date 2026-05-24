@@ -14,14 +14,14 @@ Behandelt werden Themen rund um Installation, Konfiguration, Sicherheit und Admi
 
 | | Tag | Thema | Datum | Status |
 |---|-----|-------|-------|--------|
-| 🟢 | [1. Tag](./1.Tag/README.md) | Installation RDBMS & Tools | 12.05.'25 | ✅ Abgeschlossen |
-| 🟢 | [2. Tag](./2.Tag/README.md) | Konfiguration & Datenimport | 19.05.'25 | ✅ Abgeschlossen |
-| 🟢 | [3. Tag](./3.Tag/README.md) | Transaktionen & Tabellentypen | 26.05.'25 ⚡ | ✅ Abgeschlossen (22. & 24.04.'26) |
-| ⚪ | [4. Tag](./4.Tag/README.md) | Datenbanksicherheit | 02.06.'25 | 🔒 Ausstehend |
-| ⚪ | [5. Tag](./5.Tag/README.md) | LB1 + Zugriffssystem | 09.06.'25 | 🔒 Ausstehend |
-| ⚪ | [6. Tag](./6.Tag/README.md) | Server-Administration | 16.06.'25 | 🔒 Ausstehend |
-| ⚪ | [7. Tag](./7.Tag/README.md) | LB2 + Testing & Performance | 23.06.'25 | 🔒 Ausstehend |
-| ⚪ | [8. Tag](./8.Tag/README.md) | Weiterarbeit LB3 | 30.06.'25 | 🔒 Ausstehend |
+| 🟢 | [1. Tag](./1.Tag/README.md) | Installation RDBMS & Tools | 12.05.26 | ✅ Abgeschlossen |
+| 🟢 | [2. Tag](./2.Tag/README.md) | Konfiguration & Datenimport | 19.05.26 | ✅ Abgeschlossen |
+| 🟢 | [3. Tag](./3.Tag/README.md) | Transaktionen & Tabellentypen | 26.05.26 📝 | ✅ Abgeschlossen (22. & 24.04.26) |
+| ⚪ | [4. Tag](./4.Tag/README.md) | Datenbanksicherheit | 02.06.26 | 🔒 Ausstehend |
+| ⚪ | [5. Tag](./5.Tag/README.md) | LB1 + Zugriffssystem | 09.06.26 | 🔒 Ausstehend |
+| ⚪ | [6. Tag](./6.Tag/README.md) | Server-Administration | 16.06.26 | 🔒 Ausstehend |
+| ⚪ | [7. Tag](./7.Tag/README.md) | LB2 + Testing & Performance | 23.06.26 | 🔒 Ausstehend |
+| ⚪ | [8. Tag](./8.Tag/README.md) | Weiterarbeit LB3 | 30.06.26 | 🔒 Ausstehend |
 
 ---
 
@@ -29,9 +29,9 @@ Behandelt werden Themen rund um Installation, Konfiguration, Sicherheit und Admi
 
 | LB | Gewicht | Datum | Themen |
 |----|---------|-------|--------|
-| **LB1** | 20% | 09.06.'25 | Tag 1–4 |
-| **LB2** | 30% | 23.06.'25 | Tag 1–7 |
-| **[LB3](./LB3-Praxisarbeit/README.md)** | 50% | 07.07.'25 | Praxisarbeit + Portfolio |
+| **LB1** | 20% | 09.06.26 | Tag 1–4 |
+| **LB2** | 30% | 23.06.26 | Tag 1–7 |
+| **[LB3](./LB3-Praxisarbeit/README.md)** | 50% | 07.07.26 | Praxisarbeit + Portfolio |
 
 ---
 

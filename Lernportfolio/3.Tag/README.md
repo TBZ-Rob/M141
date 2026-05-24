@@ -34,24 +34,19 @@ ALTER TABLE tabellenname ENGINE=InnoDB;
 - MyISAM erzeugt 3 Dateien: `.FRM` (Struktur), `.MYD` (Daten), `.MYI` (Index)
 - InnoDB erzeugt 2 Dateien: `.FRM` (Struktur), `.ibd` (Daten + Index im Tablespace)
 
+Der Unterschied ist im `data`-Verzeichnis klar sichtbar – `benutzer` (InnoDB) hat `.ibd`, alle anderen (MyISAM) haben `.MYD` + `.MYI`.
+
 ![Engine Wechsel](./screenshots/3t_engine_wechsel.png)
+
+![data Verzeichnis](./screenshots/3t_hotel_data_verzeichnis.png)
 
 ---
 
 ### 🏨 Hotel-Datenbank
 
-Die `hotel`-Datenbank wurde importiert. Standardmässig waren alle Tabellen auf **MyISAM** – die Tabelle `benutzer` wurde manuell auf **InnoDB** umgestellt, um Transaktionsunterstützung zu aktivieren.
-
-**Warum nicht alle auf InnoDB umstellen?**
-In diesem Fall war es eine bewusste Übung, um den Unterschied im `data`-Verzeichnis zu sehen: InnoDB-Tabellen haben `.ibd`-Dateien, MyISAM-Tabellen haben `.MYD` und `.MYI`.
+Die `hotel`-Datenbank wurde importiert. Standardmässig waren alle Tabellen auf **MyISAM** – die Tabelle `benutzer` wurde manuell auf **InnoDB** umgestellt. Die Abfrage aller Tabellentypen zeigt den Unterschied deutlich.
 
 ![Hotel Engines](./screenshots/3t_hotel_tabellen_engines.png)
-
-![Hotel InnoDB](./screenshots/3t_hotel_benutzer_innodb.png)
-
-![data Verzeichnis](./screenshots/3t_hotel_data_verzeichnis.png)
-
-![Hotel Insert](./screenshots/3t_hotel_insert_data.png)
 
 ---
 
@@ -101,7 +96,7 @@ ROLLBACK;           -- Alles rückgängig machen
 ```
 
 **Konto-Transaktion:**
-Ein realistisches Beispiel: CHF 1000 von Konto "Von" auf "Nach" überweisen. Nur wenn beide `UPDATE`-Befehle erfolgreich sind, wird `COMMIT` ausgeführt. So kann nie Geld verschwinden.
+Ein realistisches Beispiel: CHF 1000 von Konto "Von" auf "Nach" überweisen. Nur wenn beide `UPDATE`-Befehle erfolgreich sind, wird `COMMIT` ausgeführt – so kann nie Geld verschwinden.
 
 ![Konto Transaktion](./screenshots/3t_transaktion_konto.png)
 
@@ -120,32 +115,22 @@ Mit `SET AUTOCOMMIT=0` wird jeder SQL-Befehl automatisch Teil einer Transaktion 
 ### 🔒 Locking – Wie sperrt InnoDB Datensätze?
 
 **Warum Locking?**
-Wenn mehrere Benutzer gleichzeitig dieselben Daten ändern wollen, kann es zu Inkonsistenzen kommen. Locking verhindert das – aber Locks sollten so schnell wie möglich wieder freigegeben werden, damit andere Benutzer nicht blockiert werden.
+Wenn mehrere Benutzer gleichzeitig dieselben Daten ändern wollen, kann es zu Inkonsistenzen kommen. Locking verhindert das – aber Locks sollten so schnell wie möglich freigegeben werden, damit andere Benutzer nicht blockiert werden.
 
 **Demo 1 – MyISAM Table-Lock:**
-Bei MyISAM wird die ganze Tabelle gesperrt. Client B musste warten, bis Client A die Tabelle freigab. Nach dem Wechsel auf InnoDB funktionierte das feinere Row-Locking.
+Bei MyISAM wird die ganze Tabelle gesperrt. Client B musste warten, bis Client A die Tabelle freigab. Nach dem Wechsel auf InnoDB funktionierte das feinere Row-Locking korrekt.
 
 ![Locking Demo](./screenshots/3t_locking_demo.png)
 
 **Demo 2 – SELECT FOR UPDATE:**
-`SELECT ... FOR UPDATE` sperrt einen Datensatz bereits beim Lesen. Damit kann verhindert werden, dass jemand den Datensatz ändert, bevor die eigene Transaktion abgeschlossen ist. Client B wartete **25 Sekunden** bis Client A committete.
+`SELECT ... FOR UPDATE` sperrt einen Datensatz bereits beim Lesen. Client B wartete **25 Sekunden** bis Client A committete – danach wurde automatisch weitergeführt.
 
 ![SELECT FOR UPDATE](./screenshots/3t_select_for_update.png)
 
 **Demo 3 – LOCK IN SHARE MODE:**
-`SELECT ... LOCK IN SHARE MODE` erlaubt anderen Clients, den Datensatz zu **lesen**, aber nicht zu **schreiben**. Interessant: Ein **Deadlock** trat auf – Client A und Client B warteten gegenseitig aufeinander. MariaDB erkannte den Deadlock automatisch und brach eine Transaktion ab (ERROR 1213).
+`SELECT ... LOCK IN SHARE MODE` erlaubt anderen Clients, den Datensatz zu **lesen**, aber nicht zu **schreiben**. Interessant: Ein **Deadlock** trat auf – beide Clients warteten aufeinander. MariaDB erkannte ihn automatisch und brach eine Transaktion ab (ERROR 1213).
 
 ![LOCK IN SHARE MODE](./screenshots/3t_lock_in_share_mode.png)
-
-**SHOW ENGINE INNODB STATUS:**
-Zeigt den aktuellen InnoDB-Zustand inkl. aktiver Transaktionen, Locks und Deadlock-Informationen.
-
-![InnoDB Status](./screenshots/3t_innodb_status.png)
-
-**LOCK TABLES:**
-Manuelles Sperren einer ganzen Tabelle – nützlich für Backup-Operationen.
-
-![LOCK TABLES](./screenshots/3t_lock_tables.png)
 
 ---
 
@@ -161,17 +146,21 @@ Mit zwei Clients wurde die **Isolation** von Transaktionen demonstriert – eine
 | 4 | Sieht colB=**11** | Sieht colB=**14**, `ROLLBACK` | B macht Änderung rückgängig |
 | 5 | Sieht colB=**11** | Sieht colB=**11** | Beide sehen finalen Stand |
 
+**Zeitpunkt 1 – Isolation sichtbar:** Client A sieht die eigene Änderung (colB=11), Client B sieht noch den alten Wert (colB=10).
+
 ![Zeitpunkt 1 Client A](./screenshots/3t_zeitpunkt1_clientA.png)
 
 ![Zeitpunkt 1 Client B](./screenshots/3t_zeitpunkt1_clientB.png)
 
-![Zeitpunkt 3 Client A](./screenshots/3t_zeitpunkt3_clientA.png)
+**Zeitpunkt 3 – Lock wait timeout:** Client B wartete zu lange und erhielt einen Timeout-Fehler (ERROR 1205).
 
 ![Zeitpunkt 3 Client B](./screenshots/3t_zeitpunkt3_clientB.png)
 
-![Zeitpunkt 4 Client A](./screenshots/3t_zeitpunkt4_clientA.png)
+**Zeitpunkt 4 – ROLLBACK:** Client B sieht nach erfolgreichem Update colB=14, macht aber ROLLBACK – die Änderung wird verworfen.
 
 ![Zeitpunkt 4 Client B](./screenshots/3t_zeitpunkt4_clientB.png)
+
+**Zeitpunkt 5 – Finaler Stand:** Beide Clients sehen colB=11.
 
 ![Zeitpunkt 5](./screenshots/3t_zeitpunkt5.png)
 

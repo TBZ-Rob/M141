@@ -8,7 +8,7 @@ Selbstkontrolle nach jedem Tag anhand der Lernziele.
 |-----|------------|----------|
 | [1](../1.Tag/README.md) | RDBMS installiert, phpMyAdmin erreichbar | ✅ |
 | [2](../2.Tag/README.md) | my.ini gefunden, CSV/SQL importiert | ✅ |
-| [3](../3.Tag/README.md) | InnoDB vs MyISAM erklärt, Transaktion durchgeführt | 🔲 |
+| [3](../3.Tag/README.md) | InnoDB vs MyISAM erklärt, Transaktion durchgeführt | ✅ |
 | [4](../4.Tag/README.md) | Authentifizierung konfiguriert | 🔲 |
 | [5](../5.Tag/README.md) | GRANT/REVOKE angewendet | 🔲 |
 | [6](../6.Tag/README.md) | Logging konfiguriert | 🔲 |

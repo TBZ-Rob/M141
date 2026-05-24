@@ -1,11 +1,10 @@
 # 🗄️ Tag 3 – Transaktionen & Tabellentypen
 
 ![Status](https://img.shields.io/badge/Status-Abgeschlossen-green)
-![Geplant](https://img.shields.io/badge/Geplant-26.05.2025-lightgrey)
 ![Durchgeführt](https://img.shields.io/badge/Durchgeführt-22.%26%2024.04.2026-blue)
 ![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
 
-> ⚠️ Dieser Tag wurde nicht am geplanten Datum (26.05.2025) durchgeführt, sondern aufgeteilt auf den **22. und 24. April 2026**.
+> ⚠️ Dieser Tag wurde nicht am geplanten Datum (26.05.2026) durchgeführt, sondern aufgeteilt auf den **22. und 24. April 2026**.
 
 > 💬 **Claude Prompt für dieses File:**
 > *„Analysiere das ganze Repo, aktualisiere jedes Diagramm oder Darstellung auf den neusten Stand und füge bei neuen Seiten hinzu."*
@@ -167,8 +166,6 @@ Mit zwei Clients wurde die **Isolation** von Transaktionen demonstriert – eine
 ---
 
 ### 💡 Erkenntnisse
-
-Heute wurden neue SQL-Befehle kennengelernt:
 
 **`BEGIN`** – Startet eine Transaktion. Alle nachfolgenden Befehle werden erst mit `COMMIT` dauerhaft gespeichert oder mit `ROLLBACK` rückgängig gemacht. Ohne `BEGIN` wird jeder Befehl sofort ausgeführt (Autocommit).
 

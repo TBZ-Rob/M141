@@ -204,6 +204,6 @@ Besonders eindrücklich war der automatisch erkannte **Deadlock** und die **Isol
 
 ---
 
-$\textcolor{#8b949e}{\text{Hinweis: Diagramme, Rechtschreibung und Repo-Struktur wurden mit }} \textcolor{#D4622A}{\text{Claude AI Pro}} \textcolor{#8b949e}{\text{ generiert.}}$
+$\textcolor{#8b949e}{\text{Hinweis: Diagramme, Rechtschreibung und Repo-Struktur wurden mit }} \textcolor{#D4622A}{\text{Claude AI Pro}} \textcolor{#8b949e}{\text{ generiert und von mir überarbeitet.}}$
 
 <a href="../Prompts.md" style="color:#D4622A;">Prompts</a>

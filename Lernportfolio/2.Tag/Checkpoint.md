@@ -107,6 +107,6 @@ Die importierte Tabelle `tbl_plz_ort` hatte die Kollation `latin1_swedish_ci` â€
 
 ---
 
-$\textcolor{#8b949e}{\text{Hinweis: Diagramme, Rechtschreibung und Repo-Struktur wurden mit }} \textcolor{#D4622A}{\text{Claude AI Pro}} \textcolor{#8b949e}{\text{ generiert.}}$
+$\textcolor{#8b949e}{\text{Hinweis: Diagramme, Rechtschreibung und Repo-Struktur wurden mit }} \textcolor{#D4622A}{\text{Claude AI Pro}} \textcolor{#8b949e}{\text{ generiert und von mir Ã¼berarbeitet.}}$
 
 <a href="../Prompts.md" style="color:#D4622A;">Prompts</a>

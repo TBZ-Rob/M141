@@ -41,6 +41,6 @@ Alle verwendeten Prompts sind auf der Seite [Prompts](./Lernportfolio/Prompts.md
 
 ---
 
-$\textcolor{#8b949e}{\text{Hinweis: Diagramme, Rechtschreibung und Repo-Struktur wurden mit }} \textcolor{#D4622A}{\text{Claude AI Pro}} \textcolor{#8b949e}{\text{ generiert.}}$
+$\textcolor{#8b949e}{\text{Hinweis: Diagramme, Rechtschreibung und Repo-Struktur wurden mit }} \textcolor{#D4622A}{\text{Claude AI Pro}} \textcolor{#8b949e}{\text{ generiert und von mir überarbeitet.}}$
 
 <a href="./Lernportfolio/Prompts.md" style="color:#D4622A;">Prompts</a>

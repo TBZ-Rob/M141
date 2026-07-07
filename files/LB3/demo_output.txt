@@ -1,0 +1,83 @@
+Demo
+ADMIN: DatenzÃ¤hlung
+land_count	personen_count	buchung_count	positionen_count
+83	2035	1005	1745
+Demo
+ADMIN: Grants
+Grants for bp_admin@%
+GRANT USAGE ON *.* TO `bp_admin`@`%` IDENTIFIED BY PASSWORD '*AA0526692C2194DE1177D8E9E03A225BE57F491B'
+GRANT ALL PRIVILEGES ON `backpacker_robin`.* TO `bp_admin`@`%` WITH GRANT OPTION
+Demo
+ADMIN: Sample GÃ¤ste
+Personen_ID	Vorname	Name	Ort
+1	Walter	Izykowski	Beinwil am See
+2	J”rg	M„der	Davos-Frauenkirch
+3	Horst	Saez	Davos Platz
+4	Horst	Voigt	Davos-Platz
+5	Horst	Frau Kerstin Heling	Davos-Platz
+Demo
+BENUTZER: SELECT tbl_land
+Land_ID	Land
+1	Schweiz
+99	Liechtenstein
+100	Aegypten
+101	Algerien
+102	Argentinien
+Demo
+BENUTZER: SELECT tbl_buchung
+Buchungs_ID	Personen_FS	Ankunft	Abreise
+1	2	2015-05-04 00:00:00	2015-05-05 00:00:00
+6	5	2015-05-15 00:00:00	2015-05-19 00:00:00
+7	6	2015-05-15 00:00:00	2015-05-19 00:00:00
+8	3	2015-05-15 00:00:00	2015-05-19 00:00:00
+9	4	2015-05-15 00:00:00	2015-05-19 00:00:00
+Demo
+BENUTZER: UPDATE tbl_personen (Test)
+Personen_ID	Telefon
+1	+41-TEST-DEMO
+Demo
+MANAGEMENT: SELECT tbl_buchung
+Buchungs_ID	Personen_FS	Ankunft
+1	2	2015-05-04 00:00:00
+6	5	2015-05-15 00:00:00
+7	6	2015-05-15 00:00:00
+8	3	2015-05-15 00:00:00
+9	4	2015-05-15 00:00:00
+Demo
+MANAGEMENT: SELECT tbl_personen
+Personen_ID	Vorname	Name
+1	Walter	Izykowski
+2	J”rg	M„der
+3	Horst	Saez
+4	Horst	Voigt
+5	Horst	Frau Kerstin Heling
+Demo
+MANAGEMENT: CRUD auf tbl_benutzer (inkl. Password)
+Benutzer_ID	Benutzername	Password
+1	admin	a"s*d$"
+2	mueller	P%ui&kio99
+3	emueller	esther89
+Demo
+MANAGEMENT: INSERT tbl_benutzer (Test)
+Benutzer_ID	Benutzername
+27	testuser
+Demo
+MIGRATION-CHECK: FK-Constraints
+CONSTRAINT_NAME	TABLE_NAME	REFERENCED_TABLE_NAME
+fk_buchung_land	tbl_buchung	tbl_land
+fk_buchung_person	tbl_buchung	tbl_personen
+fk_position_benutzer	tbl_positionen	tbl_benutzer
+fk_position_buchung	tbl_positionen	tbl_buchung
+fk_position_leistung	tbl_positionen	tbl_leistung
+Demo
+MIGRATION-CHECK: Verwaiste FKs (sollte 0 sein)
+Beziehung	Verwaiste
+buchungâ†’personen	0
+buchungâ†’land	0
+positionenâ†’buchung	0
+
+=====================================
+Status
+DEMO ABGESCHLOSSEN!
+
+=====================================

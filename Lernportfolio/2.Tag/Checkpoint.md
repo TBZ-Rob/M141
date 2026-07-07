@@ -1,109 +1,87 @@
-# ✅ Checkpoint 2. Tag
+# ✅ Checkpoint – 2. Tag
 
+![Modul](https://img.shields.io/badge/Modul-M141-blue)
+![Tag](https://img.shields.io/badge/Tag-2-orange)
 ![Autor](https://img.shields.io/badge/Autor-Robin%20Nydegger-lightgrey)
-![Status](https://img.shields.io/badge/Status-Abgeschlossen-green)
+
+[⬅️ Tag 2](./README.md) · [🏠 Übersicht](../README.md)
+
+Konfiguration & Datenimport — Lösungen zum Checkpoint.
 
 ---
 
-## DB-Server und XAMPP
+## 🔘 Multiple Choice – my.ini Konfiguration
 
-**1. Wie kann der MySQL-Server gestartet werden?**
-- ❌ Start von `mysql.exe` im CMD-Fenster *(das ist der Client, nicht der Server)*
-- ✅ Start von `mysqld.exe` im CMD-Fenster
-- ❌ über MySQL-Workbench
-- ❌ Eingabe von localhost als URL im Browser
-- ✅ `NET START mysql` im CMD-Fenster
-- ✅ mit dem Dienstmanager von Windows
-
-**2. Informationen bei `status`-Befehl?**
-- ✅ Version des Konsolenprogramms
-- ✅ Betriebszeit des Servers
-- ✅ Version des Servers
-- ❌ Betriebszeit des DB-Klienten mysql
-
-**3. Daten im Verzeichnis datadir?**
-- ✅ Protokoll-Dateien (Log-Files)
-- ✅ Fehlerprotokolle
-- ❌ ausführbare MySQL-Programme *(diese liegen in /bin)*
-- ✅ Datenbanken
-
-**4. Wie prüfen ob MySQL-Server läuft?**
-- ✅ mit dem Dienst-Manager von Windows
-- ❌ mit dem GUI-Tool Administrator
-- ❌ durch Eingabe des Befehls `status` im CMD-Fenster *(nur wenn bereits verbunden)*
-- ✅ mit dem Task-Manager von Windows (Prozess)
+| # | Frage | Antwort |
+|---|-------|---------|
+| 1 | Wo befindet sich die MySQL-Konfigurationsdatei? | `C:\xampp\mysql\bin\my.ini` oder `my.cnf` auf Linux |
+| 2 | Welcher Parameter stellt den Port ein? | `port=3306` im Bereich `[mysqld]` |
+| 3 | Was ist der Standard-Datenverzeichnis-Pfad? | `datadir=C:/xampp/mysql/data` |
+| 4 | Welcher Parameter setzt den Zeichensatz? | `character_set_server=utf8mb4` |
+| 5 | Wie werden Änderungen in my.ini wirksam? | Nach Neustart des MySQL-Servers |
 
 ---
 
-**5. Wie testen Sie die Installation?**
-Verbindung mit `mysql -u root -p` herstellen – wenn erfolgreich, ist die Installation korrekt.
+## ✏️ Offene Fragen – Datenimport
 
-**6. Wie überprüfen Sie die Laufzeit?**
-Mit dem Befehl `status` im mysql-Monitor → zeigt `Uptime` des Servers.
+**1. Beschreiben Sie 3 verschiedene Methoden zum Datenimport in MySQL:**
 
-**7. Wozu mysql.exe? Wie starten?**
-`mysql.exe` ist der Kommandozeilen-Client für SQL-Befehle.
-Start: `mysql -u root -p` im CMD unter `C:\xampp\mysql\bin`
+- **CSV-Import**: `LOAD DATA INFILE 'datei.csv' INTO TABLE tabelle`
+- **SQL-Dump**: `mysql -u root -p datenbank < dump.sql`
+- **PHP/GUI**: Mit phpMyAdmin oder Workbench hochladen
 
-**8. 3 Informationen des status-Befehls:**
+**2. Welche Vorteile hat der Datenimport per SQL-Dump?**
 
-| Information | Bedeutung |
-|-------------|-----------|
-| Server version | Zeigt die installierte MariaDB/MySQL Version |
-| Uptime | Wie lange der Server bereits läuft |
-| Character set | Aktuelle Zeichencodierung der Verbindung |
+- Struktur UND Daten werden zusammen importiert
+- Einfaches Backup/Restore
+- Portabel zwischen verschiedenen Systemen
+- Revisionierbar (Text-Format)
 
-**9. 2 wichtige Verzeichnisse:**
+**3. Was muss beim CSV-Import beachtet werden?**
 
-| Verzeichnis | Inhalt |
-|-------------|--------|
-| `C:\xampp\mysql\bin` | Ausführbare Programme (mysql.exe, mysqld.exe, mysqldump.exe) |
-| `C:\xampp\mysql\data` | Datenbanken, Log-Dateien, my.ini |
+- Delimiter (`,` oder `;`)
+- Zeichencodierung (UTF-8, Latin1)
+- Spaltenreihenfolge muss stimmen
+- Fehlende oder zu viele Werte führen zu Fehlern
 
-**10. Inhalt der my.ini:**
-Konfigurationseinstellungen für Server (`[mysqld]`) und Client (`[client]`), z.B. Port, Zeichensatz, Datenpfade.
+**4. Wie prüft man den Erfolg eines Imports?**
 
----
+```sql
+SELECT COUNT(*) FROM importierte_tabelle;
+SELECT * FROM importierte_tabelle LIMIT 5;
+```
 
-## Codierung und Kollation
+**5. Was ist die Collation und warum ist sie wichtig?**
 
-**1. Aussagen zur Codierung:**
-- ❌ Datenbankserver erkennt Codierung automatisch
-- ✅ Codierung ist eine Vereinbarung zwischen Nutzer und System
-- ✅ Legt fest, welche binäre Bitkombination zu welchem Zeichen gehört
-- ❌ ANSI und ASCII ist dasselbe *(ANSI ist eine Erweiterung von ASCII)*
-- ❌ Unicode hat 32 Bit Codelänge *(UTF-32 hat 32 Bit, Unicode selbst ist variabel)*
-- ✅ UTF bedeutet Unicode Transformation Format
-- ❌ UTF-8 hat nur 8 Bit *(UTF-8 ist variabel: 1–4 Bytes)*
-
-**2. Aussagen zur Kollation:**
-- ❌ utf8_general_cs ist Standard *(Standard ist utf8_general_ci)*
-- ✅ DIN-Normierung bietet zwei Varianten zur Umlauthandhabung
-- ❌ Endung `_ci` unterscheidet Gross-/Kleinschreibung *(ci = case insensitive = NICHT unterschieden)*
-- ✅ Seit MySQL 5.5.3 sollte utf8mb4 verwendet werden
-- ✅ In my.ini kann UTF8-Codierung als Standard angegeben werden
-- ❌ Kollationseinstellung gilt für ganze Tabelle *(kann auch pro Spalte gesetzt werden)*
-- ✅ Binärsortierung = Sortierung anhand des binären Codes
-
-**3. Beobachtung bei DB-Kollation:**
-Die importierte Tabelle `tbl_plz_ort` hatte die Kollation `latin1_swedish_ci` – Umlaute wurden falsch dargestellt. Nach Umstellung auf `utf8mb4_unicode_ci` wurden Sonderzeichen (ä, ö, ü, é, à) korrekt angezeigt.
+Die Collation definiert Sortierregeln und Zeichenvergleiche. Wichtig für: Suchvorgänge, Sortierung, Eindeutigkeit von Feldern.
 
 ---
 
-## Daten importieren
+## 🛠️ Praktische Aufgaben
 
-**Mit welchem Befehl die Tabellenstruktur kontrollieren?**
-- ❌ SHOW DATABASES
-- ✅ SHOW CREATE TABLE *tabellenname*
-- ✅ DESC *tabellenname*
-- ✅ DESCRIBE *tabellenname*
-- ❌ SELECT * FROM *tabellenname* *(zeigt Daten, nicht Struktur)*
-- ❌ SHOW TABLE *tabellenname* *(kein gültiger Befehl)*
+### Aufgabe 1: my.ini modifizieren
+
+- [ ] my.ini in Texteditor öffnen
+- [ ] Port von 3306 zu 3307 ändern
+- [ ] MySQL neu starten
+- [ ] Mit `mysql -P 3307` verbinden
+
+### Aufgabe 2: CSV importieren
+
+- [ ] CSV-Datei vorbereiten (mit Header-Zeile)
+- [ ] Tabelle mit passenden Spalten erstellen
+- [ ] `LOAD DATA INFILE` ausführen
+- [ ] Daten mit SELECT prüfen
+
+### Aufgabe 3: SQL-Dump erstellen und einlesen
+
+- [ ] `mysqldump -u root -p testdb > backup.sql`
+- [ ] Dump-Datei in phpMyAdmin/Workbench einlesen
+- [ ] Datensätze zählen (sollte gleich sein)
 
 ---
 
-| [🏠 Übersicht](../../README.md) | [⬅️ Tag 2](../README.md) |
-|---|---|
+[⬅️ Tag 2](./README.md) · [🏠 Übersicht](../README.md)
 
 ---
 

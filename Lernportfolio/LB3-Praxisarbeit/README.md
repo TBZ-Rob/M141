@@ -27,6 +27,10 @@
 - GitHub-Portfolio erstellt
 - **Punkte: 4/4 ✅**
 
+![AWS RDS Security Group Port 3306](01_Datenbankstruktur_Constraints.png)
+
+*AWS RDS Security Group: Port 3306 TCP konfiguriert für externe Datenbankverbindungen.*
+
 ### ✅ MS B — Lokale DB: DDL, Import, DCL, Demo
 
 | Komponente | Script | Resultat | Punkte |
@@ -38,6 +42,26 @@
 
 **Punkte: 11/11 ✅**
 
+#### DDL-Ausführung: 6 Tabellen erfolgreich erstellt
+
+![DDL Tabellen erstellt](03_DDL_Tables_Created.png)
+
+*MariaDB zeigt alle 6 Tabellen nach DDL-Ausführung: InnoDB-Engine, Foreign Keys, utf8mb4 Zeichensatz.*
+
+#### DCL: Spaltenbasierte Zugriffskontrolle
+
+**Benutzer-Ansicht (begrenzt):**
+
+![Demo: Benutzer Access Denied](07_Demo_Benutzer_Access_Denied.png)
+
+*bp_benutzer versucht auf Password-Spalte zuzugreifen → ERROR 1143: Access denied. Security-Feature funktioniert!*
+
+**Admin-Ansicht (Vollzugriff):**
+
+![Demo: Admin Full Access](06_Demo_Admin_Full_Access.png)
+
+*bp_admin liest Personendaten ohne Einschränkung. Alle Spalten sichtbar, voller Datenzugriff.*
+
 ### ⚠️ MS C — Cloud-RDBMS Setup
 - AWS Account ✅
 - RDS-Instanz (MariaDB, db.t3.micro) ✅
@@ -46,6 +70,10 @@
 - Externe Verbindung: ❌ Timeout (AWS Free-Tier VPC-Isolation)
 
 **Punkte: 3/6 ⚠️** (Setup perfekt, Netzwerk-Limitation)
+
+![AWS RDS Instance Available](02_MariaDB_Status_Verfügbar.png)
+
+*AWS RDS: backpacker-robin Instanz zeigt Status "Verfügbar". MariaDB läuft, aber externe Verbindung blockiert (AWS Sandbox-Limitation).*
 
 ### ⚠️ MS D — Migration & Testing
 - Python-Automation geschrieben ✅
@@ -56,7 +84,7 @@
 
 ---
 
-## 🧪 Demo-Testprotokoll (Live 07.07.26, 15:45 UTC)
+## 🧪 Demo-Testprotokoll (Live 07.07.26)
 
 ### ADMIN: Vollzugriff & Systemprüfung
 
